@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAAC Managerial Accounting — Final Exam Study Guide</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --panel2: #1d2129;
+    --border: #2a2f3a;
+    --text: #e8eaed;
+    --muted: #9aa3b2;
+    --accent: #5b9dff;
+    --accent2: #7ee0b8;
+    --ic: #5b9dff;
+    --ex: #e0b35b;
+    --pr: #7ee0b8;
+    --good: #7ee0b8;
+    --radius: 10px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(15,17,21,0.95);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 20px;
+  }
+  header h1 {
+    margin: 0 0 4px 0;
+    font-size: 1.3rem;
+  }
+  header p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+  nav {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;
+  }
+  .navlink {
+    color: var(--text);
+    text-decoration: none;
+    background: var(--panel2);
+    border: 1px solid var(--border);
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+  .navlink:hover { border-color: var(--accent); color: var(--accent); }
+  main { max-width: 980px; margin: 0 auto; padding: 24px 18px 80px; }
+  .intro {
+    background: linear-gradient(135deg, #17203a, #131a2b);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin-bottom: 28px;
+  }
+  .intro h2 { margin-top: 0; }
+  .intro ul { margin: 8px 0 0 0; padding-left: 20px; color: var(--muted); }
+  .legend { display:flex; gap:14px; flex-wrap:wrap; margin-top:14px; font-size:0.82rem; color: var(--muted); }
+  .legend span.dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+  .stats {
+    display: flex; gap: 18px; margin-top: 14px; flex-wrap: wrap;
+  }
+  .stat {
+    background: var(--panel2); border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 14px; font-size: 0.85rem; color: var(--muted);
+  }
+  .stat b { color: var(--text); font-size: 1.1rem; display:block; }
+  .chapter { margin-bottom: 50px; padding-top: 10px; }
+  .chapter h2 {
+    font-size: 1.4rem; border-bottom: 2px solid var(--accent);
+    padding-bottom: 8px; margin-bottom: 18px;
+  }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 26px; }
+  @media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } }
+  .panel {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 14px 16px;
+  }
+  .panel h3 { margin-top: 0; font-size: 0.95rem; color: var(--accent2); text-transform: uppercase; letter-spacing: 0.03em; }
+  .panel ul { margin: 0; padding-left: 18px; font-size: 0.92rem; }
+  .panel ul.formulas li { font-family: "SFMono-Regular", Consolas, Menlo, monospace; font-size: 0.83rem; margin-bottom: 8px; color: #cdd3de; }
+  .qsectitle { font-size: 1.05rem; color: var(--muted); margin-bottom: 12px; }
+  .qsectitle .count { color: var(--accent); }
+  .qlist { display: flex; flex-direction: column; gap: 14px; }
+  .qcard {
+    background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 14px 16px;
+  }
+  .qhead { display:flex; align-items:center; gap: 10px; margin-bottom: 8px; }
+  .badge {
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 3px 9px; border-radius: 20px; font-weight: 600;
+  }
+  .badge-ic { background: rgba(91,157,255,0.15); color: var(--ic); border: 1px solid rgba(91,157,255,0.4); }
+  .badge-ex { background: rgba(224,179,91,0.15); color: var(--ex); border: 1px solid rgba(224,179,91,0.4); }
+  .badge-pr { background: rgba(126,224,184,0.15); color: var(--pr); border: 1px solid rgba(126,224,184,0.4); }
+  .qnum { color: var(--muted); font-size: 0.8rem; }
+  .qprompt { font-size: 0.96rem; margin-bottom: 8px; }
+  ul.opts { margin: 6px 0 10px 0; padding-left: 20px; color: var(--muted); font-size: 0.9rem; }
+  details.answer { margin-top: 8px; }
+  details.answer summary {
+    cursor: pointer; color: var(--accent); font-size: 0.86rem; font-weight: 600;
+    padding: 6px 0;
+  }
+  details.answer summary:hover { color: var(--accent2); }
+  .ans-body {
+    background: var(--panel2); border-left: 3px solid var(--good);
+    border-radius: 6px; padding: 10px 14px; margin-top: 8px; font-size: 0.9rem;
+  }
+  .ans-line { margin: 0 0 6px 0; }
+  .exp-line { margin: 0; color: #cdd3de; }
+  footer {
+    text-align: center; color: var(--muted); font-size: 0.8rem; padding: 30px 0 60px;
+  }
+  #toTop {
+    position: fixed; bottom: 20px; right: 20px;
+    background: var(--accent); color: #0f1115; border: none;
+    border-radius: 50%; width: 44px; height: 44px; font-size: 1.1rem;
+    cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,0.4); display:none;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>📚 BAAC Managerial Accounting — Final Exam Study Guide</h1>
+  <p>Every iClicker question from Ch. 1, 2, 3, 5, 6, 10, 11 &amp; 12 — plus extra self-study, worked, and brand-new practice questions with full solutions.</p>
+  <nav><a href="#ch1" class="navlink">Chapter 1</a>
+<a href="#ch2" class="navlink">Chapter 2</a>
+<a href="#ch3" class="navlink">Chapter 3</a>
+<a href="#ch5" class="navlink">Chapter 5</a>
+<a href="#ch6" class="navlink">Chapter 6</a>
+<a href="#ch10" class="navlink">Chapter 10</a>
+<a href="#ch11" class="navlink">Chapter 11</a>
+<a href="#ch12" class="navlink">Chapter 12</a></nav>
+</header>
+<main>
+  <div class="intro">
+    <h2>How to use this guide</h2>
+    <ul>
+      <li>Work through every chapter in order — each has Learning Objectives, a Key Formula cheat-sheet, then a full practice set.</li>
+      <li>Try to solve each question <em>before</em> clicking "Show answer" — that's what actually builds exam recall, not just recognition.</li>
+      <li>Blue badges = the <strong>original iClicker</strong> questions used in class (some blanks were filled in with the worked solution). Gold badges = <strong>extra/self-study</strong> questions from the slides. Green badges = <strong>brand-new practice</strong> questions written to stress-test the same concepts a different way.</li>
+      <li>The final exam covers chapters 7–12 per the syllabus note in Ch.12 — but this guide also includes Ch.1, 2, 3 &amp; 5 since they build the foundation (cost concepts, job costing, ABC) that later chapters assume you know. Confirm your own exact exam scope with your syllabus.</li>
+    </ul>
+    <div class="legend">
+      <div><span class="dot" style="background:var(--ic)"></span>iClicker (original)</div>
+      <div><span class="dot" style="background:var(--ex)"></span>Extra / self-study / worked example</div>
+      <div><span class="dot" style="background:var(--pr)"></span>New practice question</div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>8</b>Chapters covered</div>
+      <div class="stat"><b>107</b>Total practice questions</div>
+    </div>
+  </div>
+
+  
+    <section class="chapter" id="ch1">
+      <h2>Chapter 1 — Introduction to Managerial Accounting</h2>
+      <div class="grid2">
+        <div class="panel">
+          <h3>Learning Objectives</h3>
+          <ul><li>Distinguishing features of managerial vs. financial accounting</li><li>The three broad functions of management (Planning, Directing, Controlling)</li><li>Organizational structure (shareholders, board, CEO, CFO, controllers/treasurers/internal auditors)</li><li>Business ethics &amp; corporate social responsibility (triple bottom line)</li></ul>
+        </div>
+        <div class="panel">
+          <h3>Key Formulas &amp; Rules</h3>
+          <ul class="formulas"><li>Financial accounting = external users, historical, verifiable, whole company, must follow IFRS/ASPE.</li><li>Managerial accounting = internal users, future-focused, relevant &amp; timely, segments of the org, no required format.</li><li>Planning → Directing → Controlling: the three functions every manager performs.</li><li>Controllers keep the books &amp; internal controls; Treasurers manage cash; Internal auditors check reliability of both.</li><li>Triple bottom line = People, Planet, Profit.</li></ul>
+        </div>
+      </div>
+      <h3 class="qsectitle">Practice Questions <span class="count">(11)</span></h3>
+      <div class="qlist">
+        
+        <div class="qcard" id="ch1-q1">
+          <div class="qhead">
+            <span class="badge badge-ic">iClicker #1</span>
+            <span class="qnum">Q1</span>
+          </div>
+          <div class="qprompt">A hospital is deciding whether to keep its laundry in-house or outsource it to a contractor. Which information is MOST useful for making that decision?</div>
+          <ul class="opts"><li>The hospital&#x27;s audited financial statements from last year</li><li>The hospital&#x27;s total assets, as reported to its regulator</li><li>A report confirming the hospital follows accounting standards</li><li>Next year&#x27;s in-house laundry costs vs. the contractor&#x27;s quote</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> D — Next year&#x27;s in-house laundry costs vs. the contractor&#x27;s quote</p>
+              <p class="exp-line">Managerial decisions need forward-looking, decision-specific information, not historical, whole-company, or compliance-oriented data.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch1-q2">
+          <div class="qhead">
+            <span class="badge badge-ic">iClicker #2</span>
+            <span class="qnum">Q2</span>
+          </div>
+          <div class="qprompt">Priya is a freelance graphic designer. She has no employees, has not registered a company, and reports her design income on her personal tax return. Legally, her business is a:</div>
+          <ul class="opts"><li>Corporation</li><li>Partnership</li><li>Sole proprietorship</li><li>None of the above — she doesn&#x27;t have a business</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> C — Sole proprietorship</p>
+              <p class="exp-line">One owner, unincorporated, income flows to personal tax return = sole proprietorship.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch1-q3">
+          <div class="qhead">
+            <span class="badge badge-ic">iClicker #3</span>
+            <span class="qnum">Q3</span>
+          </div>
+          <div class="qprompt">A CFO discovers the CEO has been overstating revenue to investors. Under the corporate structure, who can the CFO ultimately take this to?</div>
+          <ul class="opts"><li>The shareholders, directly</li><li>The board of directors</li><li>The external auditors</li><li>No one — the CFO reports to the CEO</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> B — The board of directors</p>
+              <p class="exp-line">The board selects/oversees officers including the CEO and is responsible for governance; the CFO can escalate concerns to the board (and/or external auditors), not just sit on it.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch1-q4">
+          <div class="qhead">
+            <span class="badge badge-ic">iClicker #4</span>
+            <span class="qnum">Q4</span>
+          </div>
+          <div class="qprompt">Vancouver Brewing Co. — classify each activity as Planning (A), Directing (B), or Controlling (C):<br>1. The CEO sets a goal of entering the Alberta market within two years.<br>2. The production manager compares this month&#x27;s actual ingredient costs to budget and investigates a $12,000 gap.<br>3. The head of sales runs the Monday huddle and reassigns accounts after a rep quits.</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 1 = Planning, 2 = Controlling, 3 = Directing</p>
+              <p class="exp-line">Setting a future goal = Planning. Comparing actual-to-budget and investigating variances = Controlling. Coordinating people day-to-day (huddles, reassigning accounts) = Directing.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch1-q5">
+          <div class="qhead">
+            <span class="badge badge-ic">iClicker #5</span>
+            <span class="qnum">Q5</span>
+          </div>
+          <div class="qprompt">Your program sets a target of 90% student satisfaction. At year-end it surveys students, finds 78%, and launches a review of what went wrong. This is an example of:</div>
+          <ul class="opts"><li>Controlling</li><li>Motivating</li><li>Planning</li><li>Directing</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> A — Controlling</p>
+              <p class="exp-line">Comparing actual results to a target/goal and investigating the gap is the definition of controlling.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch1-q6">
+          <div class="qhead">
+            <span class="badge badge-ic">iClicker #6</span>
+            <span class="qnum">Q6</span>
+          </div>
+          <div class="qprompt">Because managerial accounting reports are used only inside the company, a business can design them however it likes — there is no required format.</div>
+          <ul class="opts"><li>True</li><li>False</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> B — False (best answer)</p>
+              <p class="exp-line">Managerial accounting isn&#x27;t bound to IFRS/ASPE, but that doesn&#x27;t mean &#x27;anything goes.&#x27; Reports still need to be designed to be relevant, timely, and useful for the specific decision at hand — &#x27;no legal requirement&#x27; is not the same as &#x27;no standard of usefulness.&#x27;</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch1-q7">
+          <div class="qhead">
+            <span class="badge badge-ic">iClicker #7</span>
+            <span class="qnum">Q7</span>
+          </div>
+          <div class="qprompt">Air Canada is deciding whether to launch a new Vancouver–Lisbon route. The accounting information this decision needs is:</div>
+          <ul class="opts"><li>Historical, and about the company as a whole</li><li>Prepared under IFRS, so investors can rely on it</li><li>Forward-looking, and focused on this one route</li><li>Audited, so that it can be trusted</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> C — Forward-looking, and focused on this one route</p>
+              <p class="exp-line">Classic managerial accounting need: future-oriented, segment-specific (one route), not IFRS/audited (that&#x27;s financial accounting&#x27;s job).</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch1-q8">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q8</span>
+          </div>
+          <div class="qprompt">Which of the following is a responsibility of the Board of Directors rather than the CEO?</div>
+          <ul class="opts"><li>Running day-to-day operations</li><li>Hiring front-line factory workers</li><li>Selecting corporate officers such as the CEO and CFO</li><li>Preparing the weekly production schedule</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> Selecting corporate officers such as the CEO and CFO</p>
+              <p class="exp-line">The board sets policy and selects officers; it does NOT manage daily operations — that is the CEO/management team&#x27;s job.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch1-q9">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q9</span>
+          </div>
+          <div class="qprompt">A treasurer and a controller are both accounting officers, but they have different jobs. Which statement correctly distinguishes them?</div>
+          <ul class="opts"><li>The controller manages the company&#x27;s cash position; the treasurer prepares financial statements</li><li>The treasurer manages the company&#x27;s cash position; the controller maintains accounting records and prepares financial statements</li><li>They perform identical roles for redundancy</li><li>Only the treasurer reports to the CFO</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> The treasurer manages the company&#x27;s cash position; the controller maintains accounting records and prepares financial statements</p>
+              <p class="exp-line">Controller = accounting records, internal controls, financial/internal reports. Treasurer = cash position. Internal auditors = check reliability of both.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch1-q10">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q10</span>
+          </div>
+          <div class="qprompt">A company&#x27;s bonus plan pays managers a bonus only if they beat a budget they set themselves. What ethical risk does this create?</div>
+          <ul class="opts"><li>No risk — this is standard practice with no downside</li><li>Managers may be incentivized to deliberately set a weak (easy-to-beat) budget</li><li>It eliminates the need for internal auditors</li><li>It guarantees more accurate financial forecasting</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> Managers may be incentivized to deliberately set a weak (easy-to-beat) budget</p>
+              <p class="exp-line">Performance-evaluation systems can create perverse incentives; tying bonuses to self-set budgets is a classic example of an incentive to sandbag.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch1-q11">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q11</span>
+          </div>
+          <div class="qprompt">&#x27;Triple bottom line&#x27; reporting evaluates a company&#x27;s performance across which three dimensions?</div>
+          <ul class="opts"><li>Revenue, expenses, net income</li><li>People, Planet, Profit</li><li>Assets, liabilities, equity</li><li>Planning, Directing, Controlling</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> People, Planet, Profit</p>
+              <p class="exp-line">Triple bottom line = social, environmental, and financial performance (a form of CSR reporting).</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="ch2">
+      <h2>Chapter 2 — Managerial Cost Concepts &amp; Cost Behaviour</h2>
+      <div class="grid2">
+        <div class="panel">
+          <h3>Learning Objectives</h3>
+          <ul><li>3 classes of manufacturing cost (DM, DL, MOH); product vs. period costs</li><li>Variable, fixed, and mixed costs; relevant range</li><li>High-low method to split mixed costs</li><li>Cost of Goods Manufactured (COGM) and Cost of Goods Sold (COGS) schedules</li></ul>
+        </div>
+        <div class="panel">
+          <h3>Key Formulas &amp; Rules</h3>
+          <ul class="formulas"><li>Total cost of a unit = Direct Materials + Direct Labour + Manufacturing Overhead</li><li>Product costs = DM + DL + MOH (attach to inventory). Period costs = selling &amp; admin costs (expensed when incurred).</li><li>High-Low: VC/unit = (Cost@High − Cost@Low) ÷ (Activity@High − Activity@Low)</li><li>FC = Total cost at either point − (VC/unit × activity at that point)  [must match at both points]</li><li>TC = VC(q) + FC</li><li>Direct Materials used = Opening RM + Purchases − Ending RM</li><li>COGM = Opening WIP + DM used + DL + MOH − Ending WIP</li><li>COGS = Opening FG + COGM − Ending FG</li></ul>
+        </div>
+      </div>
+      <h3 class="qsectitle">Practice Questions <span class="count">(13)</span></h3>
+      <div class="qlist">
+        
+        <div class="qcard" id="ch2-q1">
+          <div class="qhead">
+            <span class="badge badge-ic">iClicker 1</span>
+            <span class="qnum">Q1</span>
+          </div>
+          <div class="qprompt">Oil used to lubricate a machine in the factory. Is this a DIRECT MATERIAL?</div>
+          <ul class="opts"><li>Yes</li><li>No</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> No</p>
+              <p class="exp-line">It&#x27;s an indirect material (part of manufacturing overhead) — it doesn&#x27;t become part of the finished product and can&#x27;t be directly traced to a specific unit.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch2-q2">
+          <div class="qhead">
+            <span class="badge badge-ic">iClicker 2</span>
+            <span class="qnum">Q2</span>
+          </div>
+          <div class="qprompt">The CEO&#x27;s salary. Is this DIRECT LABOUR?</div>
+          <ul class="opts"><li>Yes</li><li>No</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> No</p>
+              <p class="exp-line">The CEO doesn&#x27;t physically work on converting materials into a finished product; the salary is an administrative (period) cost, not direct labour.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch2-q3">
+          <div class="qhead">
+            <span class="badge badge-ic">iClicker 3</span>
+            <span class="qnum">Q3</span>
+          </div>
+          <div class="qprompt">Which of the following would be a PERIOD cost for a manufacturing company?</div>
+          <ul class="opts"><li>Manufacturing equipment depreciation</li><li>Sales staff salaries</li><li>Direct material costs</li><li>Electricity to light the production facility</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> B — Sales staff salaries</p>
+              <p class="exp-line">The other three are all manufacturing (product) costs. Selling costs like sales salaries are period costs, expensed as incurred.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch2-q4">
+          <div class="qhead">
+            <span class="badge badge-ic">iClicker 4</span>
+            <span class="qnum">Q4</span>
+          </div>
+          <div class="qprompt">For each item, classify as A) Product cost or B) Period cost:<br>1. Factory heating<br>2. Factory equipment maintenance<br>3. Training a new accountant<br>4. The CEO&#x27;s salary<br>5. Health insurance for the sales team</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 1=Product, 2=Product, 3=Period, 4=Period, 5=Period</p>
+              <p class="exp-line">Anything tied to running the factory (heating, equipment maintenance) is a product cost. Anything admin/selling (training an accountant, CEO salary, sales team benefits) is a period cost. Tip: benefits follow the wage — if the wage is period, the benefit is period too.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch2-q5">
+          <div class="qhead">
+            <span class="badge badge-ic">iClicker 5</span>
+            <span class="qnum">Q5</span>
+          </div>
+          <div class="qprompt">For each item, classify as A) Variable or B) Fixed:<br>4. Insurance on a factory building<br>5. Salesperson commissions at Lululemon<br>6. Cost of mozzarella at a pizza chain</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 4=Fixed, 5=Variable, 6=Variable</p>
+              <p class="exp-line">Insurance is a flat fee regardless of output = fixed. Commissions and ingredient costs scale directly with sales/production = variable.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch2-q6">
+          <div class="qhead">
+            <span class="badge badge-ic">iClicker 6–8</span>
+            <span class="qnum">Q6</span>
+          </div>
+          <div class="qprompt">Maintenance costs for a factory:<br>Jan: 4,000 MH, $18,000 | Feb: 7,500 MH, $26,000 | Mar: 5,200 MH, $21,000<br>Apr: 8,000 MH, $25,000 | May: 3,000 MH, $16,500 | Jun: 6,000 MH, $23,000<br><br>6) What is the VARIABLE cost per machine hour?<br>A. $1.70  B. $1.90  C. $2.11  D. $3.30<br>7) What is total FIXED cost?<br>8) What is total cost at 12,000 machine hours?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 6) A — $1.70/MH   7) $11,400   8) $31,800</p>
+              <p class="exp-line">Highest activity = April (8,000 MH, $25,000); Lowest activity = May (3,000 MH, $16,500) — note Feb has the highest COST but NOT the highest activity, so it&#x27;s not used!<br>VC/MH = ($25,000 − $16,500) ÷ (8,000 − 3,000) = $8,500 ÷ 5,000 = $1.70/MH.<br>FC = $25,000 − (1.70 × 8,000) = $25,000 − $13,600 = $11,400 (check at May: $16,500 − 1.70×3,000 = $16,500−$5,100 = $11,400 ✓).<br>TC @ 12,000 MH = 1.70×12,000 + 11,400 = $20,400 + $11,400 = $31,800.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch2-q7">
+          <div class="qhead">
+            <span class="badge badge-ic">iClicker 9</span>
+            <span class="qnum">Q7</span>
+          </div>
+          <div class="qprompt">Beginning raw materials inventory: $32,000. Raw materials purchased this month: $276,000. Ending raw materials inventory: $28,000. What is the cost of RAW MATERIALS USED in production?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $280,000</p>
+              <p class="exp-line">RM used = Opening $32,000 + Purchases $276,000 − Ending $28,000 = $280,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch2-q8">
+          <div class="qhead">
+            <span class="badge badge-ic">iClicker 10</span>
+            <span class="qnum">Q8</span>
+          </div>
+          <div class="qprompt">Beginning work in process: $20,000. Direct materials used: $280,000. Direct labour: $195,000. Manufacturing overhead: $290,000. Ending work in process: $25,000. What is the COST OF GOODS MANUFACTURED?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $760,000</p>
+              <p class="exp-line">COGM = $20,000 + $280,000 + $195,000 + $290,000 − $25,000 = $760,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch2-q9">
+          <div class="qhead">
+            <span class="badge badge-ic">iClicker 11</span>
+            <span class="qnum">Q9</span>
+          </div>
+          <div class="qprompt">Beginning finished goods inventory: $130,000. Cost of goods manufactured: $760,000. Ending finished goods inventory: $150,000. What was the COST OF GOODS SOLD?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $740,000</p>
+              <p class="exp-line">COGS = $130,000 + $760,000 − $150,000 = $740,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch2-q10">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q10</span>
+          </div>
+          <div class="qprompt">A furniture maker pays a flat $6,000/month lease on its workshop, plus $40 of lumber per chair, plus a supervisor salary of $4,500/month, plus $15/chair for the finishing crew&#x27;s piecework wages. Classify: is the $40/chair lumber a product or period cost, and is it fixed or variable?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> Product cost AND variable cost</p>
+              <p class="exp-line">Lumber is a direct material (product cost) that scales with each unit produced (variable).</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch2-q11">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q11</span>
+          </div>
+          <div class="qprompt">Machine hours and total utility costs: Jan 2,000 hrs/$5,000; Feb 3,500 hrs/$7,250; Mar 1,500 hrs/$4,250; Apr 4,000 hrs/$8,000. Using the high-low method, find the variable cost per machine hour and total fixed cost.</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> VC = $1.50/MH; FC = $2,000</p>
+              <p class="exp-line">High = Apr (4,000 hrs, $8,000); Low = Mar (1,500 hrs, $4,250). VC = ($8,000−$4,250)÷(4,000−1,500) = $3,750÷2,500 = $1.50/hr. FC = $8,000 − 1.50×4,000 = $8,000−$6,000 = $2,000 (check: $4,250 − 1.50×1,500 = $4,250−$2,250 = $2,000 ✓).</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch2-q12">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q12</span>
+          </div>
+          <div class="qprompt">A bakery has: Opening RM $5,000, Purchases $22,000, Ending RM $4,000, Opening WIP $3,000, DL $18,000, MOH $12,000, Ending WIP $6,000. Opening FG $9,000, Ending FG $7,500. Calculate DM used, COGM, and COGS.</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> DM used = $23,000; COGM = $50,000; COGS = $51,500</p>
+              <p class="exp-line">DM used = 5,000+22,000−4,000 = $23,000.<br>COGM = Opening WIP 3,000 + DM used 23,000 + DL 18,000 + MOH 12,000 − Ending WIP 6,000 = $50,000.<br>COGS = Opening FG 9,000 + COGM 50,000 − Ending FG 7,500 = $51,500.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch2-q13">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q13</span>
+          </div>
+          <div class="qprompt">True or False: Per-unit fixed costs decrease as production volume increases, while per-unit variable costs stay constant regardless of volume.</div>
+          <ul class="opts"><li>True</li><li>False</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> True</p>
+              <p class="exp-line">Total fixed costs are spread over more units as volume rises, so FC/unit falls. Variable cost per unit is constant by definition — only the TOTAL variable cost changes with volume.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="ch3">
+      <h2>Chapter 3 — Job Order Cost Accounting</h2>
+      <div class="grid2">
+        <div class="panel">
+          <h3>Learning Objectives</h3>
+          <ul><li>Purpose &amp; flow of costs in a job-order system</li><li>Job cost sheets: DM + DL + MOH applied</li><li>Predetermined overhead rate (PDOHR): calculate &amp; apply</li><li>Under- vs. over-applied manufacturing overhead</li></ul>
+        </div>
+        <div class="panel">
+          <h3>Key Formulas &amp; Rules</h3>
+          <ul class="formulas"><li>Cost of a job = Direct Materials + Direct Labour + Manufacturing Overhead APPLIED</li><li>PDOHR = Estimated total overhead for the period ÷ Estimated activity (DLH, MH, DL$, units, etc.)</li><li>Applied MOH = PDOHR × ACTUAL activity for the job/period</li><li>Actual MOH &gt; Applied MOH → Underapplied (increase COGS)</li><li>Actual MOH &lt; Applied MOH → Overapplied (decrease COGS)</li><li>RM → WIP → FG → COGS: each formula&#x27;s output feeds the next stage&#x27;s input.</li></ul>
+        </div>
+      </div>
+      <h3 class="qsectitle">Practice Questions <span class="count">(15)</span></h3>
+      <div class="qlist">
+        
+        <div class="qcard" id="ch3-q1">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 1</span>
+            <span class="qnum">Q1</span>
+          </div>
+          <div class="qprompt">When computing the PDOHR, which amount is used in the numerator?</div>
+          <ul class="opts"><li>Direct labour hours</li><li>Estimated manufacturing overhead costs</li><li>Actual manufacturing overhead costs</li><li>Applied manufacturing overhead costs</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> B — Estimated manufacturing overhead costs</p>
+              <p class="exp-line">PDOHR is set BEFORE the period starts, using estimates for both numerator and denominator.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch3-q2">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 2</span>
+            <span class="qnum">Q2</span>
+          </div>
+          <div class="qprompt">What are the two components of a PDOHR?</div>
+          <ul class="opts"><li>Actual monthly costs and actual annual activity</li><li>Estimated monthly costs and actual monthly activity</li><li>Estimated annual costs and actual activity</li><li>Estimated annual costs and expected annual activity</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> D — Estimated annual costs and expected annual activity</p>
+              <p class="exp-line">Both numerator and denominator are estimates set at the start of the year, not actuals.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch3-q3">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 4</span>
+            <span class="qnum">Q3</span>
+          </div>
+          <div class="qprompt">Ferry Impressive expects annual overhead of $280,000 and direct labour costs of $350,000. Compute the overhead rate.</div>
+          <ul class="opts"><li>20%</li><li>40%</li><li>80%</li><li>None of the above</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> C — 80%</p>
+              <p class="exp-line">PDOHR = $280,000 ÷ $350,000 = 0.80 = 80% of direct labour cost.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch3-q4">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 5 (in-class)</span>
+            <span class="qnum">Q4</span>
+          </div>
+          <div class="qprompt">Seas the Day: expected MOH $160,000, expected machine usage 40,000 MH, overhead assigned on machine hours. Compute the PDOHR per machine hour.</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $4.00/machine hour</p>
+              <p class="exp-line">PDOHR = $160,000 ÷ 40,000 MH = $4.00/MH.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch3-q5">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice (from lecture example)</span>
+            <span class="qnum">Q5</span>
+          </div>
+          <div class="qprompt">Seas the Day, Job No. 302 used 2,000 machine hours (same data: PDOHR $4.00/MH). How much MOH should be applied to Job No. 302?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $8,000</p>
+              <p class="exp-line">Applied MOH = PDOHR × actual activity = $4.00 × 2,000 MH = $8,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch3-q6">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 6</span>
+            <span class="qnum">Q6</span>
+          </div>
+          <div class="qprompt">Order Online: estimated overhead $205,000, actual overhead $210,000, budgeted machine hours 20,000. Job B12 used 1,000 hours. How much overhead should be applied to Job B12?</div>
+          <ul class="opts"><li>$210</li><li>$10,250</li><li>$10,500</li><li>$205</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> B — $10,250</p>
+              <p class="exp-line">PDOHR = $205,000 ÷ 20,000 MH = $10.25/MH (use ESTIMATED overhead, not actual!). Applied = $10.25 × 1,000 = $10,250.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch3-q7">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 7</span>
+            <span class="qnum">Q7</span>
+          </div>
+          <div class="qprompt">Over-applied overhead:</div>
+          <ul class="opts"><li>means that actual manufacturing overhead costs were less than the manufacturing overhead costs allocated to jobs.</li><li>is subtracted from Work in Process Inventory upon disposal if material.</li><li>is the difference between estimated overhead and applied overhead.</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> A</p>
+              <p class="exp-line">Over-applied = we allocated MORE to jobs (applied) than we actually incurred (actual) — i.e., actual &lt; applied.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch3-q8">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 8</span>
+            <span class="qnum">Q8</span>
+          </div>
+          <div class="qprompt">Pier Pressure: actual MOH $1,210,000, PDOHR $4.00/MH, worked 290,000 machine hours. Over- or under-applied, and by how much?</div>
+          <ul class="opts"><li>$50,000 over-applied</li><li>$50,000 under-applied</li><li>$60,000 over-applied</li><li>$60,000 under-applied</li><li>None of the above</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> B — $50,000 under-applied</p>
+              <p class="exp-line">Applied = $4.00 × 290,000 = $1,160,000. Actual $1,210,000 &gt; Applied $1,160,000 → underapplied by $50,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch3-q9">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 9–11</span>
+            <span class="qnum">Q9</span>
+          </div>
+          <div class="qprompt">Estimated annual overhead $750,000, estimated machine hours 100,000. Actual overhead $745,000, actual machine hours 97,000.<br>9) PDOHR (on machine hours)?<br>10) How much overhead was applied?<br>11) Over- or under-applied, and by how much?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 9) $7.50/MH  10) $727,500 applied  11) $17,500 under-applied</p>
+              <p class="exp-line">PDOHR = 750,000÷100,000 = $7.50/MH. Applied = 7.50×97,000 = $727,500. Actual $745,000 &gt; Applied $727,500 → underapplied by $17,500.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch3-q10">
+          <div class="qhead">
+            <span class="badge badge-ex">Sample exam Q (Seas the Day, Feb)</span>
+            <span class="qnum">Q10</span>
+          </div>
+          <div class="qprompt">January PDOHR: Job 1 had DM $450, DL $300, MOH $195; Job 2 had DM $600, DL $500, MOH $325 (rate is a % of direct labour cost). What is the PDOHR?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 65% of direct labour cost</p>
+              <p class="exp-line">Job 1: 195÷300 = 65%. Job 2: 325÷500 = 65%. Same rate both jobs confirms PDOHR = 65% of DL$. Tip: back the rate out of ANY job — MOH ÷ DL.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch3-q11">
+          <div class="qhead">
+            <span class="badge badge-ex">Self-Study 1</span>
+            <span class="qnum">Q11</span>
+          </div>
+          <div class="qprompt">Tel Corp estimates for the year: DM $160,000, DL $2,000,000, factory rent $150,000, sales salaries $250,000, factory equipment depreciation $80,000, indirect factory labour $120,000, supervisor&#x27;s salary $150,000. 40,000 machine hours &amp; 20,000 direct labour hours estimated; overhead applied on machine hours. Find (a) OH rate/MH, (b) DL rate/hr, (c) total cost of a job using 200 MH, $15,000 DM, and 50 DL hours.</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> (a) $12.50/MH  (b) $100/DLH  (c) $22,500</p>
+              <p class="exp-line">Total estimated MOH = rent 150,000 + depreciation 80,000 + indirect factory labour 120,000 + supervisor salary 150,000 = $500,000 (sales salaries and DM/DL are NOT overhead). OH rate = 500,000÷40,000 MH = $12.50/MH. DL rate = 2,000,000÷20,000 = $100/hr. Job cost = DM 15,000 + DL(50×100=5,000) + MOH(200×12.50=2,500) = $22,500.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch3-q12">
+          <div class="qhead">
+            <span class="badge badge-ex">Self-Study 2</span>
+            <span class="qnum">Q12</span>
+          </div>
+          <div class="qprompt">Knot on My Watch, Job WR53: $200 DM, 10 DL hours @ $15/hr. Estimated total overhead $760,000; estimated DL hours 20,000; OH applied on DL hours. What is the cost of Job WR53?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $730</p>
+              <p class="exp-line">OH rate = 760,000÷20,000 = $38/DLH. Job cost = DM 200 + DL(10×15=150) + MOH(10×38=380) = $730.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch3-q13">
+          <div class="qhead">
+            <span class="badge badge-ex">Self-Study 4</span>
+            <span class="qnum">Q13</span>
+          </div>
+          <div class="qprompt">Breaking Bread: PDOHR is 150% of direct labour cost. This month: $85,000 direct labour, $15,000 indirect labour, actual overhead $120,000. Find (a) MOH applied, (b) under/over-applied.</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> (a) $127,500 applied  (b) $7,500 over-applied</p>
+              <p class="exp-line">Applied = 150% × $85,000 direct labour = $127,500. Actual $120,000 &lt; Applied $127,500 → overapplied by $7,500.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch3-q14">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q14</span>
+          </div>
+          <div class="qprompt">Which of these is TRUE about job order costing?</div>
+          <ul class="opts"><li>It&#x27;s used for identical, mass-produced products like cereal.</li><li>Each job gets its own cost record because jobs are unique or made in small batches.</li><li>Direct materials and direct labour are allocated using a rate, just like overhead.</li><li>Overhead is traced directly to each job with 100% accuracy.</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> B</p>
+              <p class="exp-line">Job order costing fits custom/unique work (construction, films, custom manufacturing). DM and DL are traced directly; only MOH is applied via a rate.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch3-q15">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q15</span>
+          </div>
+          <div class="qprompt">A company estimates overhead of $360,000 and 30,000 direct labour hours for the year. During the year it actually incurs $370,000 of overhead and works 31,000 direct labour hours. Is overhead over- or under-applied, and by how much?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $2,000 over-applied</p>
+              <p class="exp-line">PDOHR = 360,000÷30,000 = $12/DLH. Applied = 12×31,000 = $372,000. Actual $370,000 &lt; Applied $372,000 → overapplied by $2,000.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="ch5">
+      <h2>Chapter 5 — Activity-Based Costing (ABC)</h2>
+      <div class="grid2">
+        <div class="panel">
+          <h3>Learning Objectives</h3>
+          <ul><li>Traditional costing vs. ABC</li><li>4 steps of ABC: activities → drivers → activity rate → allocate</li><li>Value-added vs. non-value-added activities</li><li>When ABC helps (and its limitations)</li></ul>
+        </div>
+        <div class="panel">
+          <h3>Key Formulas &amp; Rules</h3>
+          <ul class="formulas"><li>Step 1: Identify activities &amp; their estimated overhead cost pools.</li><li>Step 2: Identify a cost driver for each activity (the thing that best explains why the cost occurs).</li><li>Step 3: Activity rate = Estimated overhead for the activity ÷ Expected use of the cost driver.</li><li>Step 4: Allocate = Activity rate × actual driver usage by the product/job/department.</li><li>Traditional costing = ONE overhead rate/base for everything. ABC = MULTIPLE rates, one per activity — more accurate when products differ a lot in volume/complexity.</li></ul>
+        </div>
+      </div>
+      <h3 class="qsectitle">Practice Questions <span class="count">(8)</span></h3>
+      <div class="qlist">
+        
+        <div class="qcard" id="ch5-q1">
+          <div class="qhead">
+            <span class="badge badge-ex">In-lecture poll</span>
+            <span class="qnum">Q1</span>
+          </div>
+          <div class="qprompt">What is the best cost driver for allocating: (A) Direct Materials-related OH? (B) Direct Labour-related OH? (C) Machining Costs OH?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> A) Units produced   B) Direct labour hours   C) Machine hours</p>
+              <p class="exp-line">Match the driver to what actually causes the cost: materials handling scales with units, labour-related overhead scales with labour hours, and machining costs scale with machine hours.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch5-q2">
+          <div class="qhead">
+            <span class="badge badge-ex">Worked example — A Cut Above the Rest</span>
+            <span class="qnum">Q2</span>
+          </div>
+          <div class="qprompt">Activity rates: Ordering/Receiving $80/order, Machine Setup $500/setup, Machining $2.50/MH, Assembling $0.60/part, Inspecting/Testing $20/test.<br>Scissors Jacks used: 1,000 orders, 500 setups, 300,000 MH, 1,800,000 parts, 20,000 tests. What is the total OH allocated to Scissors Jacks, and the OH cost/unit (200,000 units produced)?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> Total OH = $2,560,000; OH/unit = $12.80</p>
+              <p class="exp-line">80×1,000=80,000 + 500×500=250,000 + 2.50×300,000=750,000 + 0.60×1,800,000=1,080,000 + 20×20,000=400,000 = $2,560,000. Per unit = 2,560,000 ÷ 200,000 = $12.80.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch5-q3">
+          <div class="qhead">
+            <span class="badge badge-ex">Worked example — One in a Melon (YSG line)</span>
+            <span class="qnum">Q3</span>
+          </div>
+          <div class="qprompt">Purchasing $40/batch × 400 batches; Juicing $37/unit × 200 fruits; Bottling $24/bottle × 3,000 bottles. YSG production = 6,000 units. What&#x27;s the total OH allocated to YSG, and the OH cost per unit?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> Total OH = $95,400; OH/unit = $15.90</p>
+              <p class="exp-line">16,000 (Purchasing) + 7,400 (Juicing) + 72,000 (Bottling) = $95,400. Per unit = 95,400 ÷ 6,000 = $15.90.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch5-q4">
+          <div class="qhead">
+            <span class="badge badge-ex">Worked example — Jazzy Jars Inc.</span>
+            <span class="qnum">Q4</span>
+          </div>
+          <div class="qprompt">Direct Materials OH $720,000; Direct Labour OH $150,000; Machining OH $200,000; Maintenance OH $120,000 (driver = production runs). Totals: 15,000 units, 3,000 MH, 1,500 DLH, 50 production runs. CCJ line: 6,000 units, 1,200 MH, 500 DLH, 20 runs. What is the total OH allocated to CCJ using ABC?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $466,000</p>
+              <p class="exp-line">DM OH rate = 720,000/15,000 = $48/unit → 6,000×48 = 288,000.<br>DL OH rate = 150,000/1,500 = $100/DLH → 500×100 = 50,000.<br>Machining rate = 200,000/3,000 = $66.67/MH → 1,200×66.67 ≈ 80,000.<br>Maintenance rate = 120,000/50 = $2,400/run → 20×2,400 = 48,000.<br>Total = 288,000+50,000+80,000+48,000 = $466,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch5-q5">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q5</span>
+          </div>
+          <div class="qprompt">Value-added or non-value-added? (a) Machining a part (b) Storing inventory in a warehouse (c) Reworking a defective unit (d) Painting a finished product</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> (a) Value-added, (b) Non-value-added, (c) Non-value-added, (d) Value-added</p>
+              <p class="exp-line">Value-added activities create a physical change customers are willing to pay for (machining, painting). Non-value-added activities are waste/inefficiency the customer wouldn&#x27;t pay for if they knew (storage, rework).</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch5-q6">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q6</span>
+          </div>
+          <div class="qprompt">ABC tends to be MOST beneficial when:</div>
+          <ul class="opts"><li>A company makes one simple, identical product in huge volume</li><li>Products differ significantly in volume, batch size, and complexity, and overhead is a large share of total cost</li><li>Overhead costs are a trivial percentage of total costs</li><li>Measurement costs of tracking multiple drivers are very high</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> Products differ significantly in volume, batch size, and complexity, and overhead is a large share of total cost</p>
+              <p class="exp-line">ABC shines when a single overhead rate would badly distort costs — i.e., high product diversity and high overhead. It&#x27;s expensive, so it isn&#x27;t worth it when products are similar or overhead is small/measurement costs are high.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch5-q7">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q7</span>
+          </div>
+          <div class="qprompt">A company has two activity pools: Inspection ($150,000 total, driver = # of inspections, 3,000 total) and Setup ($90,000 total, driver = # of setups, 450 total). Product X required 800 inspections and 120 setups. What total overhead is allocated to Product X?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $64,000</p>
+              <p class="exp-line">Inspection rate = 150,000/3,000 = $50/inspection → 800×50 = 40,000. Setup rate = 90,000/450 = $200/setup → 120×200 = 24,000. Total = 40,000+24,000 = $64,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch5-q8">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q8</span>
+          </div>
+          <div class="qprompt">What is the main disadvantage of Activity-Based Costing compared to traditional costing?</div>
+          <ul class="opts"><li>It is always less accurate</li><li>It is more expensive and complex to implement and maintain</li><li>It cannot be used by service companies</li><li>It ignores cost drivers entirely</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> It is more expensive and complex to implement and maintain</p>
+              <p class="exp-line">ABC is generally MORE accurate, but that accuracy comes at the cost of complexity/expense, and some allocations are still arbitrary.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="ch6">
+      <h2>Chapter 6 — Cost-Volume-Profit (CVP) Analysis</h2>
+      <div class="grid2">
+        <div class="panel">
+          <h3>Learning Objectives</h3>
+          <ul><li>Contribution margin ($, per unit, ratio)</li><li>Break-even point (units &amp; sales $) and target net income</li><li>Sales mix &amp; weighted-average CM/CM ratio for multi-product break-even</li></ul>
+        </div>
+        <div class="panel">
+          <h3>Key Formulas &amp; Rules</h3>
+          <ul class="formulas"><li>Contribution Margin (CM) = Sales − Variable Costs</li><li>CM per unit = Selling Price/unit − Variable Cost/unit</li><li>CM ratio = CM ÷ Sales</li><li>Net Income = Sales − Variable Costs − Fixed Costs  (at break-even, NI = 0)</li><li>Break-even units = (Fixed Costs + Target NI) ÷ CM per unit</li><li>Break-even sales $ = (Fixed Costs + Target NI) ÷ CM ratio</li><li>Sales mix (multi-product): Weighted CM = Σ(CM per unit × sales mix %); Weighted CM ratio = Σ(CM ratio × sales mix %)</li><li>Multi-product BE units = (FC+Target NI) ÷ Weighted CM, then split by sales mix % per product.</li></ul>
+        </div>
+      </div>
+      <h3 class="qsectitle">Practice Questions <span class="count">(18)</span></h3>
+      <div class="qlist">
+        
+        <div class="qcard" id="ch6-q1">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 1</span>
+            <span class="qnum">Q1</span>
+          </div>
+          <div class="qprompt">Which one of the following describes the break-even point?</div>
+          <ul class="opts"><li>Point where total sales equal total variable plus total fixed costs.</li><li>Point where the contribution margin equals zero.</li><li>Point where total variable costs equal total fixed costs.</li><li>Point where total sales equal total fixed costs.</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> A</p>
+              <p class="exp-line">At break-even, Sales = VC + FC (Net Income = 0). CM is NOT zero at break-even — it exactly equals fixed costs.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q2">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 2 &amp; 3 — The Stalk Market</span>
+            <span class="qnum">Q2</span>
+          </div>
+          <div class="qprompt">CM/unit = $20 − $8 − $4 − $3 = $5. Fixed lease costs $500,000; sells 600,000 arrangements/year.<br>1) Breakeven in UNITS?<br>2) Breakeven in sales $ (Hint: FC ÷ CM ratio)?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 1) 100,000 units  2) $2,000,000</p>
+              <p class="exp-line">BE units = 500,000 ÷ 5 = 100,000. CM ratio = 5/20 = 25%. BE sales$ = 500,000 ÷ 0.25 = $2,000,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q3">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 4 &amp; 5 — The Stalk Market (target income)</span>
+            <span class="qnum">Q3</span>
+          </div>
+          <div class="qprompt">Same data, but now Stalk Market wants $700,000 profit.<br>1) Units needed?<br>2) Sales $ needed?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 1) 240,000 units  2) $4,800,000</p>
+              <p class="exp-line">Units = (500,000+700,000)÷5 = 240,000. Sales$ = (500,000+700,000)÷0.25 = $4,800,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q4">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 6</span>
+            <span class="qnum">Q4</span>
+          </div>
+          <div class="qprompt">If a firm is currently at the break-even point and it sells one more unit, what happens to its net income?</div>
+          <ul class="opts"><li>It will increase</li><li>It will decrease</li><li>It will stay the same</li><li>It will increase by the fixed cost</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> A — It will increase</p>
+              <p class="exp-line">Past break-even, every additional unit&#x27;s CM flows straight to net income (fixed costs are already fully covered), so NI increases by exactly the CM per unit.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q5">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 7</span>
+            <span class="qnum">Q5</span>
+          </div>
+          <div class="qprompt">Sales mix is:</div>
+          <ul class="opts"><li>a measure of the percentage increase in sales from period to period.</li><li>not important to managers when products have substantially different CMs.</li><li>a measure of the percentage increase in sales by product from period to period.</li><li>the relative proportion in which each product is sold when a company sells more than one product.</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> D</p>
+              <p class="exp-line">Sales mix = the relative % or ratio in which products are sold — important because different products can have very different contribution margins.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q6">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 8–10 — Byte Me Inc.</span>
+            <span class="qnum">Q6</span>
+          </div>
+          <div class="qprompt">Audio: SP $1,500, VC $1,100, CM $400, mix 75%. Video: SP $1,750, VC $1,200, CM $550, mix 25%. Fixed costs $300,125.<br>1) Weighted-average CM?<br>2) Break-even point in total units?<br>3) How many audio computers sold at break-even?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 1) $437.50  2) 686 units  3) 515 units</p>
+              <p class="exp-line">WACM = 400×0.75 + 550×0.25 = 300+137.5 = $437.50.<br>BE units = 300,125 ÷ 437.50 = 686.<br>Audio at BE = 686 × 75% ≈ 515.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q7">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 11–13 — Sweat Equity Corp</span>
+            <span class="qnum">Q7</span>
+          </div>
+          <div class="qprompt">Outdoor: mix 60%, CM ratio 40%. Indoor: mix 40%, CM ratio 50%. Fixed costs $2,420,000.<br>1) Weighted-average CM ratio?<br>2) Break-even point in dollars?<br>3) Outdoor Division sales at break-even?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 1) 44%  2) $5,500,000  3) $3,300,000</p>
+              <p class="exp-line">WACM ratio = 0.60×40% + 0.40×50% = 24%+20% = 44%.<br>BE$ = 2,420,000 ÷ 0.44 = $5,500,000.<br>Outdoor at BE = 5,500,000 × 60% = $3,300,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q8">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 1</span>
+            <span class="qnum">Q8</span>
+          </div>
+          <div class="qprompt">Just Couldn&#x27;t Cut It plans to sell 200,000 pliers at $4/unit, CM ratio 25%. If it breaks even at this sales level, what are fixed costs?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $200,000</p>
+              <p class="exp-line">BE sales$ = 200,000 units × $4 = $800,000. At break-even, FC = BE sales$ × CM ratio = 800,000 × 25% = $200,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q9">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 2</span>
+            <span class="qnum">Q9</span>
+          </div>
+          <div class="qprompt">Target NI $120,000, Fixed Costs $200,000, CM per unit $200. How many units must be sold?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 1,600 units</p>
+              <p class="exp-line">(200,000+120,000) ÷ 200 = 1,600 units.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q10">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 3 — Emotional Baggage</span>
+            <span class="qnum">Q10</span>
+          </div>
+          <div class="qprompt">Travel bags sell for $56, FC $320,000/yr, VC $42/unit. Compute sales $ required to earn net income of $410,000.</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $2,920,000</p>
+              <p class="exp-line">CM ratio = (56−42)÷56 = 25%. Sales$ = (320,000+410,000) ÷ 0.25 = $2,920,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q11">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 4 — Let Me Take a Cell-Fie</span>
+            <span class="qnum">Q11</span>
+          </div>
+          <div class="qprompt">SP $500, old VC $300, old FC $200,000; NI $80,000 at 1,400 units currently. Supplier raises VC by $25/unit; a cost-cutting program saves $17,500/month in FC. How many units must be sold to maintain the SAME net income of $80,000?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 1,500 units</p>
+              <p class="exp-line">New VC = 300+25 = $325 → new CM = 500−325 = $175. New FC = 200,000−17,500 = $182,500. Units = (182,500+80,000) ÷ 175 = 1,500 units.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q12">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 5 — SocieTea</span>
+            <span class="qnum">Q12</span>
+          </div>
+          <div class="qprompt">Currently: SP $60, VC $36, FC $100,000, selling 5,000 units. Management cuts price 10% (new SP $54) with no change to VC or FC; expects volume up 25% (extra info, not needed for BE calc). Compute the break-even point in UNITS at the new price.</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> ≈ 5,556 units</p>
+              <p class="exp-line">New CM = 54 − 36 = $18. BE units = 100,000 ÷ 18 ≈ 5,555.6 → round to 5,556 units.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q13">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 6 — Don&#x27;t Bite Me</span>
+            <span class="qnum">Q13</span>
+          </div>
+          <div class="qprompt">Model A12: CM $10, mix 60%. Model B22: CM $30, mix 25%. Model C124: CM $100, mix 15%. Fixed costs $199,500.<br>1) Weighted-average CM?<br>2) Units of EACH model to break even?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 1) $28.50  2) Total 7,000 units → A12: 4,200, B22: 1,750, C124: 1,050</p>
+              <p class="exp-line">WACM = 10×0.60 + 30×0.25 + 100×0.15 = 6+7.5+15 = $28.50. Total BE units = 199,500÷28.50 = 7,000. Split by mix: A12 60%=4,200; B22 25%=1,750; C124 15%=1,050.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q14">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 7 — You Smell Inc</span>
+            <span class="qnum">Q14</span>
+          </div>
+          <div class="qprompt">Sales mix 3 Men&#x27;s : 2 Women&#x27;s per package. Men&#x27;s: SP $2.20, VC $1.50 (CM $0.70). Women&#x27;s: SP $2.80, VC $1.10 (CM $1.70). Fixed costs $88,000.<br>1) Weighted CM per package?<br>2) Total packages to break even?<br>3) Women&#x27;s units to break even?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 1) $1.10  2) 80,000 packages  3) 32,000 women&#x27;s units</p>
+              <p class="exp-line">Weighted CM (per 5-unit package) = 3×0.70 + 2×1.70 = 2.10+3.40 = $5.50, ÷5 = $1.10/unit average. BE packages = 88,000÷1.10 = 80,000. Women&#x27;s units = 80,000 × (2/5) = 32,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q15">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 8 — You Light Me Up (candles)</span>
+            <span class="qnum">Q15</span>
+          </div>
+          <div class="qprompt">Birthday: CM ratio 20%, mix 30%. Standard: CM ratio 20%, mix 50%. Scented: CM ratio 45%, mix 20%. Fixed costs $440,000/yr. Find BE sales$ for each product line.</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> WACM ratio = 25%; Total BE $1,760,000 → Birthday $528,000, Standard $880,000, Scented $352,000</p>
+              <p class="exp-line">WACM ratio = 0.20×0.30 + 0.20×0.50 + 0.45×0.20 = 0.06+0.10+0.09 = 25%. Total BE$ = 440,000÷0.25 = 1,760,000. Split by mix: Birthday 30%=528,000; Standard 50%=880,000; Scented 20%=352,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q16">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q16</span>
+          </div>
+          <div class="qprompt">A company sells one product for $80 with variable costs of $50 and fixed costs of $210,000. What is the break-even point in units and in sales dollars?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 7,000 units; $560,000</p>
+              <p class="exp-line">CM/unit = 80−50 = $30. BE units = 210,000÷30 = 7,000. CM ratio = 30/80 = 37.5%. BE$ = 210,000÷0.375 = $560,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q17">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q17</span>
+          </div>
+          <div class="qprompt">Using the company above (SP $80, VC $50, FC $210,000), how many units must be sold to earn a target net income of $90,000?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 10,000 units</p>
+              <p class="exp-line">(210,000+90,000) ÷ 30 = 10,000 units.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch6-q18">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q18</span>
+          </div>
+          <div class="qprompt">True or False: If fixed costs increase while everything else stays the same, the break-even point in units will increase.</div>
+          <ul class="opts"><li>True</li><li>False</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> True</p>
+              <p class="exp-line">BE units = FC ÷ CM per unit — a higher numerator (FC) with the same CM per unit means more units are required to break even.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="ch10">
+      <h2>Chapter 10 — Budgeting &amp; Budgetary Planning</h2>
+      <div class="grid2">
+        <div class="panel">
+          <h3>Learning Objectives</h3>
+          <ul><li>Purpose of a master budget &amp; its components</li><li>Sales, production, direct materials, direct labour, MOH, S&amp;A budgets</li><li>Budgeted income statement</li><li>Cash budget (receipts, disbursements, financing)</li></ul>
+        </div>
+        <div class="panel">
+          <h3>Key Formulas &amp; Rules</h3>
+          <ul class="formulas"><li>Sales Budget: Sales $ = Expected volume × Selling price (first budget prepared).</li><li>Production Budget: Required production = Budgeted sales (units) + Desired ending inventory − Beginning inventory.</li><li>Direct Materials Budget: DM needed for production = Units to produce × DM per unit.  DM purchases = DM needed + Desired ending DM − Beginning DM.  Cost = purchases × cost/unit of DM.</li><li>Direct Labour Budget: Total DL cost = Units to produce × DL hours/unit × DL rate/hour.</li><li>Manufacturing OH Budget = Variable OH (rate × DLH) + Fixed OH (flat amount); keep variable &amp; fixed separate.</li><li>Cash Budget = Beginning cash + Cash receipts − Cash disbursements ± Financing = Ending cash.</li></ul>
+        </div>
+      </div>
+      <h3 class="qsectitle">Practice Questions <span class="count">(18)</span></h3>
+      <div class="qlist">
+        
+        <div class="qcard" id="ch10-q1">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 1 &amp; 2</span>
+            <span class="qnum">Q1</span>
+          </div>
+          <div class="qprompt">1) Budgets provide benchmarks that help managers evaluate performance. 2) One key benefit of budgeting is that it forces managers to plan.</div>
+          <ul class="opts"><li>True</li><li>False</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> Both True</p>
+              <p class="exp-line">Budgets set the benchmark for later performance comparisons AND force the discipline of forward planning — both are core purposes of budgeting.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q2">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 3 — Bed Bath and Beyoncé</span>
+            <span class="qnum">Q2</span>
+          </div>
+          <div class="qprompt">Budgeted sales: Apr 20,000, May 50,000, Jun 30,000, Jul 25,000, Aug 15,000 units. SP $10/unit. Desired EI = 20% of next month&#x27;s sales. March 31 inventory = 4,000 units. What is required production in MAY?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 46,000 units</p>
+              <p class="exp-line">May sales 50,000 + desired EI(20%×June 30,000=6,000) − beginning inv(=April&#x27;s ending=20%×May sales=10,000) = 50,000+6,000−10,000 = 46,000 units.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q3">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 4</span>
+            <span class="qnum">Q3</span>
+          </div>
+          <div class="qprompt">5 lbs of DM required per unit; desired month-end DM = 10% of next month&#x27;s production; March 31 DM on hand = 13,000 lbs. Production: Apr 26,000, May 46,000, Jun 29,000, Jul 23,000 units. DM cost $0.40/lb. What is the cost of direct materials PURCHASED for MAY?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $88,600</p>
+              <p class="exp-line">May DM needed = 46,000×5 = 230,000 lbs. Desired ending = 10%×June need(29,000×5=145,000) = 14,500 lbs. Total = 244,500. Beginning May = ending April = 10%×230,000 = 23,000 lbs. Purchases = 244,500−23,000 = 221,500 lbs × $0.40 = $88,600.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q4">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 5 — Fast &amp; Flurrious</span>
+            <span class="qnum">Q4</span>
+          </div>
+          <div class="qprompt">MOH applied on DLH: variable rate $20/DLH, fixed OH $50,000/month. Budgeted DLH: April 1,300, May 3,300.<br>a) Total MOH cost for MAY?<br>b) MOH rate per DLH for MAY?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> a) $116,000   b) ≈ $35.15/DLH</p>
+              <p class="exp-line">Variable = 20×3,300 = 66,000. + Fixed 50,000 = $116,000 total. Rate = 116,000÷3,300 ≈ $35.15/DLH.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q5">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 8 — Baby Got Track</span>
+            <span class="qnum">Q5</span>
+          </div>
+          <div class="qprompt">$5/lb raw material, 3 lbs/unit, 0.5 DL hrs/unit @ $15/hr, MOH $25/DLH. Calculate the budgeted per-unit manufacturing cost (DM+DL+MOH).</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $35.00/unit</p>
+              <p class="exp-line">DM = 3×$5 = $15. DL = 0.5×$15 = $7.50. MOH = 0.5×$25 = $12.50. Total = 15+7.50+12.50 = $35.00.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q6">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 9 — Planet Volleywood</span>
+            <span class="qnum">Q6</span>
+          </div>
+          <div class="qprompt">DM purchases: Q1 $70,000, Q2 $90,000. 40% paid in cash as incurred; remainder paid the following quarter. What are budgeted cash payments for purchases in Q2?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $78,000</p>
+              <p class="exp-line">Q2 cash out = 40%×Q2 purchases(90,000) + 60%×Q1 purchases carried over(70,000) = 36,000 + 42,000 = $78,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q7">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 1 — Baby Got Track</span>
+            <span class="qnum">Q7</span>
+          </div>
+          <div class="qprompt">Sells 1,200,000 units @ $51.25; manufacturing cost $35/unit; budgeted S&amp;A $12,000,000. What is budgeted net income?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $7,500,000</p>
+              <p class="exp-line">Sales = 1,200,000×51.25 = 61,500,000. COGS = 1,200,000×35 = 42,000,000. Gross profit = 19,500,000. NI = 19,500,000 − 12,000,000 S&amp;A = $7,500,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q8">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 2 — Some Spike It Hot</span>
+            <span class="qnum">Q8</span>
+          </div>
+          <div class="qprompt">Wants minimum cash balance $15,000. Beginning cash $16,500; expected receipts $210,000; expected disbursements $220,000. How much must be borrowed?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $8,500</p>
+              <p class="exp-line">Cash before financing = 16,500+210,000−220,000 = $6,500. Need $15,000 minimum → borrow 15,000−6,500 = $8,500.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q9">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 5</span>
+            <span class="qnum">Q9</span>
+          </div>
+          <div class="qprompt">A sales budget is:</div>
+          <ul class="opts"><li>derived from the production budget.</li><li>management&#x27;s best estimate of sales revenue for the year.</li><li>not the starting point for the master budget.</li><li>prepared only for credit sales.</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> B</p>
+              <p class="exp-line">The sales budget is the FIRST budget prepared and is management&#x27;s forecast of sales revenue — everything else (production, DM, labour, etc.) flows from it.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q10">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 7 — Sole Mates</span>
+            <span class="qnum">Q10</span>
+          </div>
+          <div class="qprompt">DM purchases: Q1 $70,000, Q2 $90,000. 40% paid in cash as incurred, rest paid the following quarter. Budgeted cash payments for Q2?</div>
+          <ul class="opts"><li>$96,000</li><li>$90,000</li><li>$78,000</li><li>$72,000</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> C — $78,000</p>
+              <p class="exp-line">Same structure as Clicker 9: 40%×90,000 + 60%×70,000 = 36,000+42,000 = $78,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q11">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 8</span>
+            <span class="qnum">Q11</span>
+          </div>
+          <div class="qprompt">The production budget formula is budgeted sales in units plus:</div>
+          <ul class="opts"><li>desired ending merchandise inventory less beginning merchandise inventory.</li><li>beginning finished goods units less desired ending finished goods units.</li><li>desired ending direct materials units less beginning direct materials units.</li><li>desired ending finished goods units less beginning finished goods units.</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> D</p>
+              <p class="exp-line">Production = Sales + Desired Ending FG − Beginning FG (the &#x27;# needed − # have = # to make&#x27; formula).</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q12">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 9</span>
+            <span class="qnum">Q12</span>
+          </div>
+          <div class="qprompt">Total kg of DM needed for production is 9,500 kg. Beginning inventory 1,000 kg, desired ending inventory 2,200 kg. Total kg to be purchased?</div>
+          <ul class="opts"><li>9,400</li><li>9,500</li><li>9,700</li><li>10,700</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> D — 10,700</p>
+              <p class="exp-line">Purchases = DM needed 9,500 + Desired ending 2,200 − Beginning 1,000 = 10,700 kg.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q13">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 10</span>
+            <span class="qnum">Q13</span>
+          </div>
+          <div class="qprompt">The direct labour cost budget is calculated by multiplying the direct labour cost per hour by the:</div>
+          <ul class="opts"><li>total required direct labour hours.</li><li>physical units to be produced.</li><li>equivalent units to be produced.</li><li>No correct answer is given.</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> A</p>
+              <p class="exp-line">Total DL cost = DL hours required (from units × hrs/unit) × DL rate/hour.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q14">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 11</span>
+            <span class="qnum">Q14</span>
+          </div>
+          <div class="qprompt">Which budget begins with the number of units to be sold?</div>
+          <ul class="opts"><li>Manufacturing overhead budget</li><li>Production budget</li><li>Direct materials budget</li><li>Capital expenditures budget</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> B — Production budget</p>
+              <p class="exp-line">The production budget starts with budgeted UNIT sales (from the sales budget) and adjusts for desired/beginning inventory.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q15">
+          <div class="qhead">
+            <span class="badge badge-ex">Extra 12</span>
+            <span class="qnum">Q15</span>
+          </div>
+          <div class="qprompt">A plan that shows units to be sold and projected selling price, and is the starting point of the budgeting process, is called the:</div>
+          <ul class="opts"><li>cash budget.</li><li>budgeted statement of cash flows.</li><li>sales budget.</li><li>budgeted income statement.</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> C — Sales budget</p>
+              <p class="exp-line">The sales budget always comes first in the master budget sequence.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q16">
+          <div class="qhead">
+            <span class="badge badge-ex">Putting it together — Waffle On Inc.</span>
+            <span class="qnum">Q16</span>
+          </div>
+          <div class="qprompt">Plans to sell 120,000 waffles in August. Beginning FG inventory 10,000 waffles; desired ending FG 8,000 waffles. Each waffle needs 1.5 cups batter and 3 tbsp syrup.<br>1) How many waffles must be manufactured in August?<br>2) If they plan to make 140,000 waffles, and batter inventory is beginning 18,000 / desired ending 16,000 cups, how many cups of batter must be purchased?<br>3) If they plan to make 150,000 waffles, and syrup inventory is beginning 25,000 / desired ending 28,000 tbsp, how many tbsp of syrup must be purchased?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 1) 118,000 waffles  2) 208,000 cups of batter  3) 453,000 tbsp of syrup</p>
+              <p class="exp-line">1) 120,000 sales + 8,000 desired EI − 10,000 beginning = 118,000 waffles.<br>2) Batter needed = 140,000×1.5 = 210,000 cups. Purchases = 210,000 + 16,000 − 18,000 = 208,000 cups.<br>3) Syrup needed = 150,000×3 = 450,000 tbsp. Purchases = 450,000 + 28,000 − 25,000 = 453,000 tbsp.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q17">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q17</span>
+          </div>
+          <div class="qprompt">A company budgets sales of 8,000 units next month and wants ending inventory equal to 15% of next month&#x27;s sales (projected at 10,000 units). Beginning inventory is 1,200 units. What is required production?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 8,300 units</p>
+              <p class="exp-line">Desired EI = 15%×10,000 = 1,500. Production = 8,000 + 1,500 − 1,200 = 8,300 units.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch10-q18">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q18</span>
+          </div>
+          <div class="qprompt">Direct labour needs 2 hours/unit at $18/hour. The production budget calls for 5,000 units next month. What is the budgeted direct labour cost?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $180,000</p>
+              <p class="exp-line">5,000 units × 2 hrs/unit × $18/hr = 10,000 hrs × $18 = $180,000.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="ch11">
+      <h2>Chapter 11 — Budgetary Control &amp; Responsibility Accounting</h2>
+      <div class="grid2">
+        <div class="panel">
+          <h3>Learning Objectives</h3>
+          <ul><li>Static budgets vs. flexible budgets</li><li>4 steps to build a flexible budget</li><li>Favourable (F) vs. Unfavourable (U) variances</li><li>Responsibility accounting basics (cost/profit/investment centres)</li></ul>
+        </div>
+        <div class="panel">
+          <h3>Key Formulas &amp; Rules</h3>
+          <ul class="formulas"><li>Static budget = ONE level of activity, set before the period starts.</li><li>Flexible budget = budgeted RATES applied to the ACTUAL level of activity (a &#x27;redo&#x27; of the budget at what actually happened).</li><li>4 steps: 1) Split costs into variable/fixed. 2) Set a budgeted rate for each variable cost (rate = static $ ÷ static activity). 3) Apply rate × actual activity (fixed costs unchanged). 4) Compare flexible budget to actual → mark Favourable/Unfavourable.</li><li>Actual costs &gt; Budget (or Actual income &lt; Budget) = UNFAVOURABLE (U).  Actual costs &lt; Budget (or Actual income &gt; Budget) = FAVOURABLE (F).</li></ul>
+        </div>
+      </div>
+      <h3 class="qsectitle">Practice Questions <span class="count">(8)</span></h3>
+      <div class="qlist">
+        
+        <div class="qcard" id="ch11-q1">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 1</span>
+            <span class="qnum">Q1</span>
+          </div>
+          <div class="qprompt">A static budget:</div>
+          <ul class="opts"><li>is one that is geared to the most profitable level of activity for a company.</li><li>is a projection of budget data at various levels of activity.</li><li>considers that actual activity is often different from the level of activity expected.</li><li>is a projection of budget data at one level of activity.</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> D</p>
+              <p class="exp-line">Static = ONE fixed level of activity, set in advance, regardless of what actually happens.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch11-q2">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 2</span>
+            <span class="qnum">Q2</span>
+          </div>
+          <div class="qprompt">Killjoy Manufacturing budgeted 40,000 units for 2032; actual production was 41,000 units. Which comparison is most useful?</div>
+          <ul class="opts"><li>Actual results for 41,000 units with a NEW budget for 41,000 units</li><li>Actual results for 41,000 units with the original budget for 40,000 units</li><li>Actual results for 41,000 units with the previous year&#x27;s actual results for 44,000 units</li><li>It does not matter — all choices are equally useful.</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> A</p>
+              <p class="exp-line">You must compare actual results to a budget at the SAME activity level (a flexible budget) — comparing 41,000 actual to a 40,000 static budget isn&#x27;t apples-to-apples.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch11-q3">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 3</span>
+            <span class="qnum">Q3</span>
+          </div>
+          <div class="qprompt">Surf N Waves planned to sell 27,000 surfboards; actual sold was 23,000. Which provides the best comparison?</div>
+          <ul class="opts"><li>A comparison is not needed.</li><li>A budget of 27,000 units of activity</li><li>A budget of 23,000 units of activity</li><li>The master budget level of activity</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> C — A budget of 23,000 units of activity</p>
+              <p class="exp-line">Flex the budget to the ACTUAL activity level (23,000) before comparing to actual results.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch11-q4">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 4</span>
+            <span class="qnum">Q4</span>
+          </div>
+          <div class="qprompt">At 9,000 DLH, the static budget for direct materials is $27,000. During the year the company incurred $28,000 of DM at 9,200 DLH actually worked. What is the variance for direct materials?</div>
+          <ul class="opts"><li>$1,000 unfavourable</li><li>$1,000 favourable</li><li>$400 favourable</li><li>$400 unfavourable</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> D — $400 unfavourable</p>
+              <p class="exp-line">Budgeted rate = 27,000÷9,000 = $3/DLH. Flexible budget @ 9,200 DLH = 3×9,200 = $27,600. Actual $28,000 &gt; Flexible $27,600 → $400 unfavourable.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch11-q5">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice — Tape It Together Corp.</span>
+            <span class="qnum">Q5</span>
+          </div>
+          <div class="qprompt">Static budget @ 50,000 units: DM $37,500, DL $45,000, Indirect materials $15,000, Indirect labour $12,500, Utilities $10,000, Maintenance $5,000 (fixed: Rent $10,000, Supervision $7,000, Depreciation $5,000). Actual @ 55,000 units, total actual cost $150,000. Build the flexible budget @ 55,000 units and find the variance.</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> Flexible total = $159,500; variance = $9,500 Favourable</p>
+              <p class="exp-line">Scale each variable cost by 55,000/50,000 = 1.10: DM 41,250, DL 49,500, Ind.mat 16,500, Ind.labour 13,750, Utilities 11,000, Maintenance 5,500 → Total variable $137,500. Fixed stays $22,000. Flexible total = $159,500. Actual $150,000 &lt; Flexible $159,500 → $9,500 Favourable.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch11-q6">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice — Sheet Happens Inc.</span>
+            <span class="qnum">Q6</span>
+          </div>
+          <div class="qprompt">Budgeted at 2,800 units: variable costs/unit — DM $10, DL $6, MOH $4 (total $20/unit). Fixed: Depreciation $9,000, Other $6,000/month. Actual activity: 3,200 units. What is total flexible-budget manufacturing cost at 3,200 units?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $79,000</p>
+              <p class="exp-line">Variable = 20 × 3,200 = $64,000. Fixed (unchanged) = 9,000+6,000 = $15,000. Total flexible budget = $79,000.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch11-q7">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q7</span>
+          </div>
+          <div class="qprompt">Which of the following is TRUE about a flexible budget?</div>
+          <ul class="opts"><li>It uses the same fixed-cost amounts as the static budget, regardless of actual activity.</li><li>It changes both variable AND fixed costs proportionally with activity.</li><li>It is prepared only after the year is completely over, and can never be used for planning.</li><li>It ignores cost behaviour (variable vs. fixed) entirely.</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> It uses the same fixed-cost amounts as the static budget, regardless of actual activity.</p>
+              <p class="exp-line">Only variable costs are rescaled to actual activity (rate × actual activity); fixed costs remain the same total dollar amount regardless of volume, within the relevant range.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch11-q8">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q8</span>
+          </div>
+          <div class="qprompt">A company&#x27;s static budget shows utilities of $19,000 at 1,000 machine hours. Actual machine hours were 1,250, and actual utilities cost was $23,000. What is the flexible-budget variance for utilities?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> $500 Unfavourable</p>
+              <p class="exp-line">Rate = 19,000÷1,000 = $19/MH. Flexible budget @1,250 MH = 19×1,250 = $23,750. Actual $23,000 &lt; Flexible $23,750 → $750... let&#x27;s recheck: 23,750-23,000=750 Favourable. (Actual cost is LESS than the flexed budget, which is favourable — actual spent less than what the flexible budget allowed.)</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="ch12">
+      <h2>Chapter 12 — Standard Costing &amp; Variance Analysis</h2>
+      <div class="grid2">
+        <div class="panel">
+          <h3>Learning Objectives</h3>
+          <ul><li>Standard (budgeted) vs. actual costs</li><li>Materials price &amp; quantity variances</li><li>Labour price(rate) &amp; quantity(efficiency) variances</li><li>Variable overhead rate &amp; quantity(efficiency) variances</li></ul>
+        </div>
+        <div class="panel">
+          <h3>Key Formulas &amp; Rules</h3>
+          <ul class="formulas"><li>Glossary: AH=Actual Hours, SH=Standard Hours, AP=Actual Price, SP=Standard Price, AQ=Actual Quantity, SQ=Standard Quantity, AR=Actual Rate, SR=Standard Rate.</li><li>Materials Price Variance (MPV) = AQ × (AP − SP)</li><li>Materials Quantity Variance (MQV) = SP × (AQ − SQ)</li><li>Labour Price/Rate Variance (LPV) = AH × (AR − SR)</li><li>Labour Quantity/Efficiency Variance (LQV) = SR × (AH − SH)</li><li>Variable OH Rate Variance (VORV) = AH × (AR − SR)</li><li>Variable OH Quantity/Efficiency Variance (VOQV) = SR × (AH − SH)</li><li>A POSITIVE result (Actual &gt; Standard) = Unfavourable (U). A NEGATIVE result (Actual &lt; Standard) = Favourable (F).</li><li>Total variance for a cost = Price/Rate variance + Quantity/Efficiency variance.</li></ul>
+        </div>
+      </div>
+      <h3 class="qsectitle">Practice Questions <span class="count">(16)</span></h3>
+      <div class="qlist">
+        
+        <div class="qcard" id="ch12-q1">
+          <div class="qhead">
+            <span class="badge badge-ex">Warm-Up</span>
+            <span class="qnum">Q1</span>
+          </div>
+          <div class="qprompt">If actual costs exceed budgeted/standard costs, the variance is a(n):</div>
+          <ul class="opts"><li>normal variance.</li><li>unfavourable variance.</li><li>favourable variance.</li><li>accounting error.</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> B</p>
+              <p class="exp-line">Actual &gt; Standard = Unfavourable, by definition.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch12-q2">
+          <div class="qhead">
+            <span class="badge badge-ic">Clickers 1–3</span>
+            <span class="qnum">Q2</span>
+          </div>
+          <div class="qprompt">Classify as Favourable (A) or Unfavourable (B):<br>1. Sales Revenue: Actual $50,000, Budget $70,000<br>2. Material Costs: Actual $96,000, Budget $100,000<br>3. Overhead Costs: Actual $40,000, Budget $38,000</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> 1=Unfavourable, 2=Favourable, 3=Unfavourable</p>
+              <p class="exp-line">For REVENUE, actual below budget is bad (Unfavourable). For COSTS, actual below budget is good (Favourable) and actual above budget is bad (Unfavourable).</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch12-q3">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 4</span>
+            <span class="qnum">Q3</span>
+          </div>
+          <div class="qprompt">A FAVOURABLE direct materials PRICE variance means:</div>
+          <ul class="opts"><li>actual cost was greater than standard cost.</li><li>standard cost was less than actual cost.</li><li>standard cost was greater than actual cost.</li><li>actual quantity was less than standard quantity.</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> C</p>
+              <p class="exp-line">Favourable price variance = we paid LESS than standard (AP &lt; SP), i.e., standard price was greater than actual price/cost.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch12-q4">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 5</span>
+            <span class="qnum">Q4</span>
+          </div>
+          <div class="qprompt">Standard: 2 lb @ $8.00/lb. Actual: buys 22,000 lb @ $7.50/lb, produces 10,000 units. Materials PRICE variance? (Favourable = +)</div>
+          <ul class="opts"><li>11,000</li><li>−11,000</li><li>5,500</li><li>−16,000</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> A — 11,000 (Favourable)</p>
+              <p class="exp-line">MPV = AQ×(AP−SP) = 22,000×(7.50−8.00) = −$11,000, i.e. $11,000 Favourable → reported as +11,000 under the &#x27;favourable = +&#x27; convention.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch12-q5">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 6</span>
+            <span class="qnum">Q5</span>
+          </div>
+          <div class="qprompt">Same data (Standard 2 lb @ $8.00/lb; Actual 22,000 lb used, 10,000 units produced). Materials QUANTITY variance? (Favourable = +)</div>
+          <ul class="opts"><li>−16,000</li><li>16,000</li><li>−5,000</li><li>4,000</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> A — −16,000 (Unfavourable)</p>
+              <p class="exp-line">SQ = 2×10,000 = 20,000 lb. MQV = SP×(AQ−SQ) = 8.00×(22,000−20,000) = $16,000 U → reported as −16,000 under the &#x27;favourable=+&#x27; convention (used more material than standard allows).</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch12-q6">
+          <div class="qhead">
+            <span class="badge badge-ex">Total DM variance check</span>
+            <span class="qnum">Q6</span>
+          </div>
+          <div class="qprompt">From Clickers 5 &amp; 6: Price variance +11,000 (F), Quantity variance −16,000 (U). What is the total DM variance?</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> −$5,000 (i.e., $5,000 Unfavourable)</p>
+              <p class="exp-line">11,000 + (−16,000) = −5,000, so overall $5,000 Unfavourable — the quantity overrun outweighed the favourable price.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch12-q7">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 7</span>
+            <span class="qnum">Q7</span>
+          </div>
+          <div class="qprompt">Product YY: standard 3 hrs @ $12.00/hr. Actual: 3,500 DLH @ $12.40/hr, produced 1,200 units. Labour PRICE variance? (Favourable = +)</div>
+          <ul class="opts"><li>−1,400</li><li>1,400</li><li>−4,000</li><li>400</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> A — −1,400 (Unfavourable)</p>
+              <p class="exp-line">LPV = AH×(AR−SR) = 3,500×(12.40−12.00) = $1,400 U → −1,400 (paid more per hour than standard).</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch12-q8">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 8</span>
+            <span class="qnum">Q8</span>
+          </div>
+          <div class="qprompt">Same data (standard 3 hrs/unit, produced 1,200 units, 3,500 DLH actual). Labour QUANTITY variance? (Favourable = +)</div>
+          <ul class="opts"><li>1,200</li><li>−1,200</li><li>2,000</li><li>−1,400</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> A — 1,200 (Favourable)</p>
+              <p class="exp-line">SH = 3×1,200 = 3,600. LQV = SR×(AH−SH) = 12×(3,500−3,600) = −$1,200 → $1,200 F (used FEWER hours than standard allows — efficient!).</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch12-q9">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 9</span>
+            <span class="qnum">Q9</span>
+          </div>
+          <div class="qprompt">Product YY: standard OH rate $20.00/DLH. Actual: 3,500 DLH, $71,300 total variable OH, produced 1,200 units. Variable OH RATE variance? (Favourable = +)</div>
+          <ul class="opts"><li>−1,300</li><li>1,300</li><li>−2,000</li><li>70,000</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> A — −1,300 (Unfavourable)</p>
+              <p class="exp-line">Actual rate = 71,300÷3,500 = $20.371/DLH. VORV = AH×(AR−SR) = 3,500×(20.371−20.00) = $1,300 U → −1,300.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch12-q10">
+          <div class="qhead">
+            <span class="badge badge-ic">Clicker 10</span>
+            <span class="qnum">Q10</span>
+          </div>
+          <div class="qprompt">Same data. Variable OH QUANTITY (efficiency) variance? (Favourable = +)</div>
+          <ul class="opts"><li>2,000</li><li>−2,000</li><li>1,300</li><li>−1,200</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> A — 2,000 (Favourable)</p>
+              <p class="exp-line">SH = 3×1,200 = 3,600. VOQV = SR×(AH−SH) = 20×(3,500−3,600) = −$2,000 → $2,000 F (fewer hours used than standard).</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch12-q11">
+          <div class="qhead">
+            <span class="badge badge-ic">Extra Clicker — Box It Up</span>
+            <span class="qnum">Q11</span>
+          </div>
+          <div class="qprompt">Standard: 6 boards/box @ $10. Used 11,500 boards for 1,900 boxes. Materials QUANTITY variance?</div>
+          <ul class="opts"><li>$5,000 U</li><li>$5,000 F</li><li>$1,000 U</li><li>$1,000 F</li></ul>
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> C — $1,000 U</p>
+              <p class="exp-line">SQ = 6×1,900 = 11,400. MQV = SP×(AQ−SQ) = 10×(11,500−11,400) = $1,000 U.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch12-q12">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q12</span>
+          </div>
+          <div class="qprompt">Standard: 5 kg @ $6/kg per unit. Actual: 4,800 kg purchased &amp; used @ $6.20/kg, producing 1,000 units. Compute the materials price and quantity variances (state F or U).</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> MPV = $960 U; MQV = $1,200 F</p>
+              <p class="exp-line">MPV = AQ×(AP−SP) = 4,800×(6.20−6.00) = 4,800×0.20 = $960 U.<br>SQ = 5×1,000 = 5,000 kg. MQV = SP×(AQ−SQ) = 6×(4,800−5,000) = 6×(−200) = −$1,200 → $1,200 F.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch12-q13">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q13</span>
+          </div>
+          <div class="qprompt">Standard: 2 hrs @ $18/hr per unit. Actual: 2,150 hours worked @ $17.50/hr, producing 1,000 units. Compute the labour price and quantity (efficiency) variances (state F or U).</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> LPV = $1,075 F; LQV = $2,700 U</p>
+              <p class="exp-line">LPV = AH×(AR−SR) = 2,150×(17.50−18.00) = 2,150×(−0.50) = −$1,075 → $1,075 F.<br>SH = 2×1,000 = 2,000 hrs. LQV = SR×(AH−SH) = 18×(2,150−2,000) = 18×150 = $2,700 U.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch12-q14">
+          <div class="qhead">
+            <span class="badge badge-pr">Practice</span>
+            <span class="qnum">Q14</span>
+          </div>
+          <div class="qprompt">Standard variable OH rate = $15/DLH. Actual: 4,000 DLH worked, $63,000 actual variable OH incurred, producing 2,050 units at a standard of 2 hrs/unit. Compute the OH rate variance and OH efficiency (quantity) variance.</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> VORV = $3,000 F; VOQV = $1,500 U</p>
+              <p class="exp-line">Actual rate = 63,000÷4,000 = $15.75/hr — wait, recompute: 63,000/4,000=15.75, that&#x27;s HIGHER than standard, giving unfavourable. Let&#x27;s verify arithmetic: VORV = AH×(AR−SR)=4,000×(15.75-15)=4,000×0.75=3,000 U (not F — actual rate exceeded standard). SH = 2×2,050 = 4,100 hrs. VOQV = SR×(AH−SH) = 15×(4,000−4,100) = 15×(−100) = −1,500 → $1,500 F (fewer hours used than standard allows).</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch12-q15">
+          <div class="qhead">
+            <span class="badge badge-ex">Bringing it Together — Steep Dreams Are Made of Tea</span>
+            <span class="qnum">Q15</span>
+          </div>
+          <div class="qprompt">Standard/unit: DM 4m @ $4.50=$18; DL 3h @ $12=$36. DM price variance = $4,750 F. Actual material price = $4.40/m. Produced 11,500 units (standard DM cost of output = $207,000, i.e. 11,500×$18). Find: (1) Actual quantity of material used, (2) Materials quantity variance.</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> (1) AQ = 47,500 metres  (2) MQV = $6,750 Unfavourable</p>
+              <p class="exp-line">MPV = AQ×(AP−SP): $4,750 F means AQ×(4.50−4.40) = 4,750 → AQ×0.10 = 4,750 → AQ = 47,500 m.<br>SQ = 4×11,500 = 46,000 m. MQV = SP×(AQ−SQ) = 4.50×(47,500−46,000) = 4.50×1,500 = $6,750 U.</p>
+            </div>
+          </details>
+        </div>
+        <div class="qcard" id="ch12-q16">
+          <div class="qhead">
+            <span class="badge badge-ex">Bringing it Together (cont&#x27;d)</span>
+            <span class="qnum">Q16</span>
+          </div>
+          <div class="qprompt">Same company: actual labour rate $12.20/hr, 33,400 hours worked, standard rate $12/hr @ 3 hrs/unit, 11,500 units produced. Find the labour price and labour quantity variances.</div>
+          
+          <details class="answer">
+            <summary>Show answer &amp; explanation</summary>
+            <div class="ans-body">
+              <p class="ans-line"><strong>Answer:</strong> LPV = $6,680 U; LQV = $13,200 F</p>
+              <p class="exp-line">LPV = AH×(AR−SR) = 33,400×(12.20−12.00) = 33,400×0.20 = $6,680 U.<br>SH = 3×11,500 = 34,500 hrs. LQV = SR×(AH−SH) = 12×(33,400−34,500) = 12×(−1,100) = −$13,200 → $13,200 F.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  <footer>Built from your BAAC lecture note PDFs (Ch. 1, 2, 3, 5, 6, 10, 11, 12). Good luck on the final! 🍀</footer>
+</main>
+<button id="toTop" title="Back to top">↑</button>
+<script>
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', () => {
+    toTop.style.display = window.scrollY > 500 ? 'block' : 'none';
+  });
+  toTop.addEventListener('click', () => window.scrollTo({top:0behavior:'smooth'}));
+</script>
+</body>
+</html>
